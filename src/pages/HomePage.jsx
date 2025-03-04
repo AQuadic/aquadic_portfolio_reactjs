@@ -1,9 +1,10 @@
 import React from "react";
+import HomeHero from "@/components/home/HomeHero.jsx";
 
 const HomePage = () => {
   return (
     <div>
-      <h1>Home Page</h1>
+      <HomeHero />
     </div>
   );
 };
