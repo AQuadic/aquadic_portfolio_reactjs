@@ -1,9 +1,10 @@
 import React from "react";
 import HomeHero from "@/components/home/HomeHero.jsx";
+import AboutUs from "@/components/HomePage/AboutUs.jsx";
 
 const HomePage = () => {
   return (
-    <div>
+    <div className="flex flex-col gap-6">
       <HomeHero />
       <AboutUs />
     </div>
