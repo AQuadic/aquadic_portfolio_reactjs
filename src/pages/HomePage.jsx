@@ -1,9 +1,9 @@
-import React from "react";
+import AboutUs from "@/components/HomePage/AboutUs";
 
 const HomePage = () => {
   return (
     <div>
-      <h1>Home Page</h1>
+      <AboutUs />
     </div>
   );
 };
