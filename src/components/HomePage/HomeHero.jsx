@@ -41,7 +41,7 @@ const HomeHero = () => {
         <HomeGradientRight />
       </span>
       <div className="container relative mt-20">
-        <span className="absolute -top-20">
+        <span className="absolute -top-16">
           <HomeLinesIcon className="w-[40px] sm:w-[60px] md:w-[80px]" />
         </span>
         <h1 className="text-center font-bold text-4xl sm:text-5xl md:text-[72px] mx-10">
