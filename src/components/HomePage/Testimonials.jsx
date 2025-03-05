@@ -2,7 +2,7 @@ import img from '@/assets/images/testimonials.webp'
 import Card from "../constants/Home/Card";
 const Testimonials = () => {
     return (
-        <section className="container py-[120px]">
+        <section className="container md:py-[120px]">
             <h1 className="text-[#121212] md:text-[32px] text-lg flex justify-center md:leading-8">Testimonials</h1>
             <h2 className="text-[#121212] md:text-[56px] text-2xl font-bold flex justify-center md:leading-[56px] md:mt-6"><span className="text-brandColor">Hear&nbsp;</span> From Us </h2>
             <div className="mt-12 grid lg:grid-cols-2 grid-cols-1 gap-4">

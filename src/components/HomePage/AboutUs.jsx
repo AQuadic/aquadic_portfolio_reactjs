@@ -5,7 +5,7 @@ import aboutus from "@/assets/images/aboutusImage.webp";
 const AboutUs = () => {
   const [isExpanded, setIsExpanded] = useState(false);
   return (
-    <section className="container py-[120px]">
+    <section className="container md:py-[120px]">
       <h1 className="text-[#121212] text-[32px] flex justify-center">
         About Us
       </h1>
