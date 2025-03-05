@@ -6,7 +6,7 @@ import ContactUs from "@/components/HomePage/ContactUs";
 
 const HomePage = () => {
   return (
-    <div className="flex flex-col gap-[64px]">
+    <div className="flex flex-col gap-[64px] sm:gap-[128px]">
       <HomeHero />
       <HomeMarquee />
       <AboutUs />
