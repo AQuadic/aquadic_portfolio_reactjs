@@ -107,27 +107,27 @@ const Header = () => {
                   <DropdownMenuContent className="w-56">
                     <DropdownMenuLabel>
                       <ul>
-                        <li className="mb-4">
-                          <NavLink to='/aboutus' className='text-black text-base font-normal left-8'>About Us</NavLink>
-                        </li>
-                        <li className="mb-4">
-                          <NavLink to='/team' className='text-black text-base font-normal left-8'>Team</NavLink>
-                        </li>
-                        <li className="mb-4">
-                          <NavLink to='/process' className='text-black text-base font-normal left-8'>Process</NavLink>
-                        </li>
-                        <li className="mb-4">
-                          <NavLink to='/flog' className='text-black text-base font-normal left-8'>Flog</NavLink>
-                        </li>
-                        <li className="mb-4">
-                          <NavLink to='/portfolio' className='text-black text-base font-normal left-8'>Portfolio</NavLink>
-                        </li>
-                        <li className="mb-4">
-                          <NavLink to='/joinus' className='text-black text-base font-normal left-8'>Join Us</NavLink>
-                        </li>
-                        <li className="mb-4">
-                          <NavLink to='/contactus' className='text-black text-base font-normal left-8'>Contact Us</NavLink>
-                        </li>
+                        <NavLink to='aboutus' className="hover:bg-brandColor flex items-center px-2 w-full h-10 transition duration-300 text-black text-base font-normal left-8 hover:text-white">
+                          <p>About Us</p>
+                        </NavLink>
+                        <NavLink to="team" className="hover:bg-brandColor flex items-center px-2 w-full h-10 transition duration-300 text-black text-base font-normal left-8 hover:text-white">
+                          <p>Team</p>
+                        </NavLink>
+                        <NavLink to="process" className="hover:bg-brandColor flex items-center px-2 w-full h-10 transition duration-300 text-black text-base font-normal left-8 hover:text-white">
+                          <p>Process</p>
+                        </NavLink>
+                        <NavLink to="flog" className="hover:bg-brandColor flex items-center px-2 w-full h-10 transition duration-300 text-black text-base font-normal left-8 hover:text-white">
+                          <p>Flog</p>
+                        </NavLink>
+                        <NavLink to="portfolio" className="hover:bg-brandColor flex items-center px-2 w-full h-10 transition duration-300 text-black text-base font-normal left-8 hover:text-white">
+                          <p>Portfolio</p>
+                        </NavLink>
+                        <NavLink to="joinus" className="hover:bg-brandColor flex items-center px-2 w-full h-10 transition duration-300 text-black text-base font-normal left-8 hover:text-white">
+                          <p>Join Us</p>
+                        </NavLink>
+                        <NavLink to="contactus" className="hover:bg-brandColor flex items-center px-2 w-full h-10 transition duration-300 text-black text-base font-normal left-8 hover:text-white">
+                          <p>Contact Us</p>
+                        </NavLink>
                       </ul>
                     </DropdownMenuLabel>
                   </DropdownMenuContent>
@@ -145,21 +145,21 @@ const Header = () => {
                   <DropdownMenuContent className="w-full">
                     <DropdownMenuLabel>
                       <ul>
-                        <li className="mb-4">
-                          <NavLink to='/webdev' className='text-black text-xl font-normal left-8'>Web Development</NavLink>
-                        </li>
-                        <li className="mb-4">
-                          <NavLink to='/mobiledesign' className='text-black text-xl font-normal left-8'>Mobile App Design</NavLink>
-                        </li>
-                        <li className="mb-4">
-                          <NavLink to='/webdesign' className='text-black text-xl font-normal left-8'>Web Design</NavLink>
-                        </li>
-                        <li className="mb-4">
-                          <NavLink to='/mobiledev' className='text-black text-xl font-normal left-8'>Mobile App Development</NavLink>
-                        </li>
-                        <li className="mb-4">
-                          <NavLink to='/testing' className='text-black text-xl font-normal left-8'>Software Testing</NavLink>
-                        </li>
+                        <NavLink to='/webdev' className="hover:bg-brandColor flex items-center px-2 w-full h-10 transition duration-300 text-black text-base font-normal left-8 hover:text-white">
+                          <p>Web Development</p>
+                        </NavLink>
+                        <NavLink to='/mobiledesign' className="hover:bg-brandColor flex items-center px-2 w-full h-10 transition duration-300 text-black text-base font-normal left-8 hover:text-white">
+                          <p>Mobile App Design</p>
+                        </NavLink>
+                        <NavLink to='/webdesign' className="hover:bg-brandColor flex items-center px-2 w-full h-10 transition duration-300 text-black text-base font-normal left-8 hover:text-white">
+                          <p>Web Design</p>
+                        </NavLink>
+                        <NavLink to='/mobiledev' className="hover:bg-brandColor flex items-center px-2 w-full h-10 transition duration-300 text-black text-base font-normal left-8 hover:text-white">
+                          <p>Mobile App Development</p>
+                        </NavLink>
+                        <NavLink to='/testing' className="hover:bg-brandColor flex items-center px-2 w-full h-10 transition duration-300 text-black text-base font-normal left-8 hover:text-white">
+                          <p>Software Testing</p>
+                        </NavLink>
                       </ul>
                     </DropdownMenuLabel>
                   </DropdownMenuContent>
