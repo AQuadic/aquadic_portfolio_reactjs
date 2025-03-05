@@ -74,3 +74,8 @@
 .container {
     @apply max-w-7xl px-6 mx-auto;
 }
+
+.marquee-shadow {
+    box-shadow: 0 0 12px 0 #00000040;
+
+}
