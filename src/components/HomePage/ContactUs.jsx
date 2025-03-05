@@ -10,7 +10,7 @@ const ContactUs = () => {
             <div className='mt-12 flex lg:flex-row flex-col items-center lg:gap-[210px] gap-5'>
                 <div>
                     <img src={contactBg} className='w-[547px] h-[366px]' alt="Placeholder" />
-                    <div className='flex md:flex-row flex-col gap-[37px] mt-6'>
+                    <div className='flex md:flex-row flex-col gap-[36px] mt-6'>
                         <div className='flex flex-col items-center md:gap-4'>
                             <img src={location} alt="Location" />
                             <p className='md:w-[176px] text-center text-[#5D5D5D] text-xl leading-[30px]'>Zizinia, Alexandria, Egypt</p>
