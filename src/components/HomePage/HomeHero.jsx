@@ -84,8 +84,11 @@ const HomeHero = () => {
           Design and digital product development company. We create beautiful
           and functional web platforms, apps, and custom software solutions.
         </motion.p>
-        <button className="mt-8 mx-auto flex items-center justify-center gap-3 bg-brandColor rounded-full px-6 py-3 text-white font-medium">
-          <span>GetStarted</span> <ArrowRight />
+        <button className="mt-8 mx-auto flex items-center justify-center gap-3 bg-brandColor rounded-full px-6 py-3 text-white font-medium border border-brandColor group">
+          <span>Get Started</span>{" "}
+          <span className="group-hover:translate-x-1 transition-transform">
+            <ArrowRight />
+          </span>
         </button>
       </div>
     </section>
