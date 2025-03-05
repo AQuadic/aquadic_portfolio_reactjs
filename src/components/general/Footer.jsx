@@ -34,25 +34,25 @@ const Footer = () => {
               <h2 className="mb-6 text-[28px] font-semibold text-black">Company</h2>
               <ul>
                 <li className="mb-4">
-                  <NavLink to='/' className='text-black text-xl left-8'>About Us</NavLink>
+                  <NavLink to='/aboutus' className='text-black text-base left-8'>About Us</NavLink>
                 </li>
                 <li className="mb-4">
-                  <NavLink to='/' className='text-black text-xl left-8'>Team</NavLink>
+                  <NavLink to='/team' className='text-black text-base left-8'>Team</NavLink>
                 </li>
                 <li className="mb-4">
-                  <NavLink to='/' className='text-black text-xl left-8'>Process</NavLink>
+                  <NavLink to='/process' className='text-black text-base left-8'>Process</NavLink>
                 </li>
                 <li className="mb-4">
-                  <NavLink to='/' className='text-black text-xl left-8'>Flog</NavLink>
+                  <NavLink to='/flog' className='text-black text-base left-8'>Flog</NavLink>
                 </li>
                 <li className="mb-4">
-                  <NavLink to='/' className='text-black text-xl left-8'>Portfolio</NavLink>
+                  <NavLink to='/portfolio' className='text-black text-base left-8'>Portfolio</NavLink>
                 </li>
                 <li className="mb-4">
-                  <NavLink to='/' className='text-black text-xl left-8'>Join Us</NavLink>
+                  <NavLink to='/joinus' className='text-black text-base left-8'>Join Us</NavLink>
                 </li>
                 <li className="mb-4">
-                  <NavLink to='/' className='text-black text-xl left-8'>Contact Us</NavLink>
+                  <NavLink to='/contactus' className='text-black text-base left-8'>Contact Us</NavLink>
                 </li>
               </ul>
             </div>
@@ -60,19 +60,19 @@ const Footer = () => {
               <h2 className="mb-6 text-[28px] font-semibold text-black">Services</h2>
               <ul>
                 <li className="mb-4">
-                  <NavLink to='/' className='text-black text-xl left-8'>Web Development</NavLink>
+                  <NavLink to='/webdev' className='text-black text-xl left-8'>Web Development</NavLink>
                 </li>
                 <li className="mb-4">
-                  <NavLink to='/' className='text-black text-xl left-8'>Mobile App Design</NavLink>
+                  <NavLink to='/mobiledesign' className='text-black text-xl left-8'>Mobile App Design</NavLink>
                 </li>
                 <li className="mb-4">
-                  <NavLink to='/' className='text-black text-xl left-8'>Web Design</NavLink>
+                  <NavLink to='/webdesign' className='text-black text-xl left-8'>Web Design</NavLink>
                 </li>
                 <li className="mb-4">
-                  <NavLink to='/' className='text-black text-xl left-8'>Mobile App Development</NavLink>
+                  <NavLink to='/mobiledev' className='text-black text-xl left-8'>Mobile App Development</NavLink>
                 </li>
                 <li className="mb-4">
-                  <NavLink to='/' className='text-black text-xl left-8'>Software Testing</NavLink>
+                  <NavLink to='/testing' className='text-black text-xl left-8'>Software Testing</NavLink>
                 </li>
               </ul>
             </div>
