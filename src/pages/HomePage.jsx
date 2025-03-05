@@ -1,5 +1,4 @@
-import React from "react";
-import HomeHero from "@/components/home/HomeHero.jsx";
+import HomeHero from "@/components/HomePage/HomeHero.jsx";
 import AboutUs from "@/components/HomePage/AboutUs.jsx";
 
 const HomePage = () => {
