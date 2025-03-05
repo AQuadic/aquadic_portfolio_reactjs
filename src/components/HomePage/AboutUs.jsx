@@ -1,5 +1,4 @@
 import { useState } from "react";
-
 import aboutus from "@/assets/images/aboutusImage.webp";
 import { useInView } from "react-intersection-observer";
 import AnimateOnScroll from "@/components/general/AnimateOnScroll.jsx";
