@@ -8,10 +8,10 @@ import HomeGradientRight from "@/components/icons/home/HomeGradientRight.jsx";
 const Layout = () => {
   return (
     <div className="relative">
-      <span className="fixed left-0 max-w-[40%]">
+      <span className="fixed left-0 max-w-[40%] -z-10">
         <HomeGradientLeft />
       </span>
-      <span className="fixed right-0 max-w-[40%]">
+      <span className="fixed right-0 max-w-[40%] -z-10">
         <HomeGradientRight />
       </span>
       <Header />
