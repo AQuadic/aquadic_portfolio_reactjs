@@ -1,9 +1,11 @@
-import React from "react";
+import HomeHero from "@/components/HomePage/HomeHero.jsx";
+import AboutUs from "@/components/HomePage/AboutUs.jsx";
 
 const HomePage = () => {
   return (
-    <div>
-      <h1>Home Page</h1>
+    <div className="flex flex-col gap-6">
+      <HomeHero />
+      <AboutUs />
     </div>
   );
 };
