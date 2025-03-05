@@ -7,6 +7,7 @@ import HomeGradientLeft from "@/components/icons/home/HomeGradientLeft";
 import HomeGradientRight from "@/components/icons/home/HomeGradientRight";
 import HomeArch from "@/components/icons/home/HomeArch.jsx";
 import ArrowRight from "@/components/icons/general/ArrowRight.jsx";
+import HomeStars from "@/components/HomePage/HomeStars.jsx";
 
 const words = ["Startups", "Businesses", "Agencies"];
 
@@ -90,6 +91,7 @@ const HomeHero = () => {
             <ArrowRight />
           </span>
         </button>
+        <HomeStars />
       </div>
     </section>
   );
