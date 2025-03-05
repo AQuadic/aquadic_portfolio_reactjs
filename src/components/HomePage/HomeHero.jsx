@@ -34,12 +34,6 @@ const HomeHero = () => {
 
   return (
     <section className="relative">
-      <span className="absolute left-0 max-w-[40%]">
-        <HomeGradientLeft />
-      </span>
-      <span className="absolute right-0 max-w-[40%]">
-        <HomeGradientRight />
-      </span>
       <div className="container relative mt-20">
         <span className="absolute -top-16">
           <HomeLinesIcon className="w-[40px] sm:w-[60px] md:w-[80px]" />
