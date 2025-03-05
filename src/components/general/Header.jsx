@@ -1,12 +1,9 @@
 import { NavLink } from "react-router";
 import { useState } from "react";
-import { Cloud, LifeBuoy } from "lucide-react";
 import {
   DropdownMenu,
   DropdownMenuContent,
-  DropdownMenuItem,
   DropdownMenuLabel,
-  DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import arrow from "@/assets/images/down_arrow.svg";
@@ -108,16 +105,31 @@ const Header = () => {
                     <img src={arrow} alt="Arrow" />
                   </DropdownMenuTrigger>
                   <DropdownMenuContent className="w-56">
-                    <DropdownMenuLabel>My Account</DropdownMenuLabel>
-                    <DropdownMenuSeparator />
-                    <DropdownMenuItem>
-                      <LifeBuoy />
-                      <span>Support</span>
-                    </DropdownMenuItem>
-                    <DropdownMenuItem disabled>
-                      <Cloud />
-                      <span>API</span>
-                    </DropdownMenuItem>
+                    <DropdownMenuLabel>
+                      <ul>
+                        <li className="mb-4">
+                          <NavLink to='/aboutus' className='text-black text-base font-normal left-8'>About Us</NavLink>
+                        </li>
+                        <li className="mb-4">
+                          <NavLink to='/team' className='text-black text-base font-normal left-8'>Team</NavLink>
+                        </li>
+                        <li className="mb-4">
+                          <NavLink to='/process' className='text-black text-base font-normal left-8'>Process</NavLink>
+                        </li>
+                        <li className="mb-4">
+                          <NavLink to='/flog' className='text-black text-base font-normal left-8'>Flog</NavLink>
+                        </li>
+                        <li className="mb-4">
+                          <NavLink to='/portfolio' className='text-black text-base font-normal left-8'>Portfolio</NavLink>
+                        </li>
+                        <li className="mb-4">
+                          <NavLink to='/joinus' className='text-black text-base font-normal left-8'>Join Us</NavLink>
+                        </li>
+                        <li className="mb-4">
+                          <NavLink to='/contactus' className='text-black text-base font-normal left-8'>Contact Us</NavLink>
+                        </li>
+                      </ul>
+                    </DropdownMenuLabel>
                   </DropdownMenuContent>
                 </DropdownMenu>
               </li>
@@ -130,17 +142,26 @@ const Header = () => {
                     </p>
                     <img src={arrow} alt="Arrow" />
                   </DropdownMenuTrigger>
-                  <DropdownMenuContent className="w-56">
-                    <DropdownMenuLabel>My Account</DropdownMenuLabel>
-                    <DropdownMenuSeparator />
-                    <DropdownMenuItem>
-                      <LifeBuoy />
-                      <span>Support</span>
-                    </DropdownMenuItem>
-                    <DropdownMenuItem disabled>
-                      <Cloud />
-                      <span>API</span>
-                    </DropdownMenuItem>
+                  <DropdownMenuContent className="w-full">
+                    <DropdownMenuLabel>
+                      <ul>
+                        <li className="mb-4">
+                          <NavLink to='/webdev' className='text-black text-xl font-normal left-8'>Web Development</NavLink>
+                        </li>
+                        <li className="mb-4">
+                          <NavLink to='/mobiledesign' className='text-black text-xl font-normal left-8'>Mobile App Design</NavLink>
+                        </li>
+                        <li className="mb-4">
+                          <NavLink to='/webdesign' className='text-black text-xl font-normal left-8'>Web Design</NavLink>
+                        </li>
+                        <li className="mb-4">
+                          <NavLink to='/mobiledev' className='text-black text-xl font-normal left-8'>Mobile App Development</NavLink>
+                        </li>
+                        <li className="mb-4">
+                          <NavLink to='/testing' className='text-black text-xl font-normal left-8'>Software Testing</NavLink>
+                        </li>
+                      </ul>
+                    </DropdownMenuLabel>
                   </DropdownMenuContent>
                 </DropdownMenu>
               </li>
