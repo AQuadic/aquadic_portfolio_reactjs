@@ -41,14 +41,14 @@ const HomeHero = () => {
 
   return (
     <section className="relative">
-      <div className="container relative mt-20">
+      <div className="container relative mt-[60px] md:mt-[140px]">
         <span className="absolute -top-16">
           <HomeLinesIcon className="w-[40px] sm:w-[60px] md:w-[80px]" />
         </span>
 
         {/* Animated Heading */}
         <motion.h1
-          className="text-center font-bold text-4xl sm:text-5xl md:text-[72px] mx-10"
+          className="text-center font-bold text-4xl sm:text-5xl md:text-[72px] mx-10 leading-relaxed md:!leading-[100px]"
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
