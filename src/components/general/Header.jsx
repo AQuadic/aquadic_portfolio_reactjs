@@ -25,6 +25,9 @@ const Header = () => {
   const toggleSidebar1 = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
+  const closeSidebar = () => {
+    setIsSidebarOpen(false);
+  };
 
   return (
     <div>
@@ -38,6 +41,12 @@ const Header = () => {
               <img className="max-sm:w-[130px]" src={logo} alt="Logo" />
             </NavLink>
           </div>
+          {isSidebarOpen && (
+            <div
+              className="fixed inset-0 bg-black opacity-50 z-40"
+              onClick={closeSidebar}
+            ></div>
+          )}
           <div
             className={`fixed inset-y-0 ${isSidebarOpen ? "left-0" : "-left-full"} bg-white w-64 md:hidden z-50 transition-all duration-300 ease-in-out`}
           >
@@ -49,7 +58,7 @@ const Header = () => {
             <div className="flex flex-col gap-5 font-normal text-lg rtl:space-x-reverse mt-4">
               <ul className="flex flex-col gap-2 font-normal text-lg rtl:space-x-reverse md:flex-row">
                 <li>
-                  <NavLink
+                  <NavLink onClick={closeSidebar}
                     to="/"
                     className="block py-2 px-3 md:p-0 text-[#121212] font-medium text-base transform  hover:text-brandColor hover:underline transition-all duration-300"
                     aria-current="page"
@@ -71,43 +80,43 @@ const Header = () => {
                     <DropdownMenuContent className="w-56 mx-2">
                       <DropdownMenuLabel>
                         <ul>
-                          <NavLink
+                          <NavLink onClick={closeSidebar}
                             to="aboutus"
                             className="hover:bg-brandColor flex items-center px-2 w-full h-10 transition duration-300 text-black text-base font-normal left-8 hover:text-white"
                           >
                             <p>About Us</p>
                           </NavLink>
-                          <NavLink
+                          <NavLink onClick={closeSidebar}
                             to="team"
                             className="hover:bg-brandColor flex items-center px-2 w-full h-10 transition duration-300 text-black text-base font-normal left-8 hover:text-white"
                           >
                             <p>Team</p>
                           </NavLink>
-                          <NavLink
+                          <NavLink onClick={closeSidebar}
                             to="process"
                             className="hover:bg-brandColor flex items-center px-2 w-full h-10 transition duration-300 text-black text-base font-normal left-8 hover:text-white"
                           >
                             <p>Process</p>
                           </NavLink>
-                          <NavLink
+                          <NavLink onClick={closeSidebar}
                             to="flog"
                             className="hover:bg-brandColor flex items-center px-2 w-full h-10 transition duration-300 text-black text-base font-normal left-8 hover:text-white"
                           >
                             <p>Flog</p>
                           </NavLink>
-                          <NavLink
+                          <NavLink onClick={closeSidebar}
                             to="portfolio"
                             className="hover:bg-brandColor flex items-center px-2 w-full h-10 transition duration-300 text-black text-base font-normal left-8 hover:text-white"
                           >
                             <p>Portfolio</p>
                           </NavLink>
-                          <NavLink
+                          <NavLink onClick={closeSidebar}
                             to="joinus"
                             className="hover:bg-brandColor flex items-center px-2 w-full h-10 transition duration-300 text-black text-base font-normal left-8 hover:text-white"
                           >
                             <p>Join Us</p>
                           </NavLink>
-                          <NavLink
+                          <NavLink onClick={closeSidebar}
                             to="contactus"
                             className="hover:bg-brandColor flex items-center px-2 w-full h-10 transition duration-300 text-black text-base font-normal left-8 hover:text-white"
                           >
@@ -130,31 +139,31 @@ const Header = () => {
                     <DropdownMenuContent className="w-full mx-2">
                       <DropdownMenuLabel>
                         <ul>
-                          <NavLink
+                          <NavLink onClick={closeSidebar}
                             to="/webdev"
                             className="hover:bg-brandColor flex items-center px-2 w-full h-10 transition duration-300 text-black text-base font-normal left-8 hover:text-white"
                           >
                             <p>Web Development</p>
                           </NavLink>
-                          <NavLink
+                          <NavLink onClick={closeSidebar}
                             to="/mobiledesign"
                             className="hover:bg-brandColor flex items-center px-2 w-full h-10 transition duration-300 text-black text-base font-normal left-8 hover:text-white"
                           >
                             <p>Mobile App Design</p>
                           </NavLink>
-                          <NavLink
+                          <NavLink onClick={closeSidebar}
                             to="/webdesign"
                             className="hover:bg-brandColor flex items-center px-2 w-full h-10 transition duration-300 text-black text-base font-normal left-8 hover:text-white"
                           >
                             <p>Web Design</p>
                           </NavLink>
-                          <NavLink
+                          <NavLink onClick={closeSidebar}
                             to="/mobiledev"
                             className="hover:bg-brandColor flex items-center px-2 w-full h-10 transition duration-300 text-black text-base font-normal left-8 hover:text-white"
                           >
                             <p>Mobile App Development</p>
                           </NavLink>
-                          <NavLink
+                          <NavLink onClick={closeSidebar}
                             to="/testing"
                             className="hover:bg-brandColor flex items-center px-2 w-full h-10 transition duration-300 text-black text-base font-normal left-8 hover:text-white"
                           >
@@ -166,7 +175,7 @@ const Header = () => {
                   </DropdownMenu>
                 </li>
                 <li>
-                  <NavLink
+                  <NavLink onClick={closeSidebar}
                     to="/portfolio"
                     className="block py-2 px-3 md:p-0 text-[#121212] font-medium text-base transform  hover:text-brandColor hover:underline transition-all duration-300"
                   >
@@ -174,7 +183,7 @@ const Header = () => {
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink
+                  <NavLink onClick={closeSidebar}
                     to="/faqs"
                     className="block py-2 px-3 md:p-0 text-[#121212] font-medium text-base transform  hover:text-brandColor hover:underline transition-all duration-300"
                   >
@@ -190,7 +199,7 @@ const Header = () => {
           >
             <ul className="flex flex-col gap-[59px] font-normal p-4 md:p-0 mt-4 text-lg rtl:space-x-reverse md:flex-row">
               <li>
-                <NavLink
+                <NavLink onClick={closeSidebar}
                   to="/"
                   className="block py-2 px-3 md:p-0 text-[#121212] font-medium text-base transform  hover:text-brandColor hover:underline transition-all duration-300"
                   aria-current="page"
@@ -212,13 +221,13 @@ const Header = () => {
                   <DropdownMenuContent className="w-56">
                     <DropdownMenuLabel>
                       <ul>
-                        <NavLink
+                        <NavLink onClick={closeSidebar}
                           to="aboutus"
                           className="hover:bg-brandColor flex items-center px-2 w-full h-10 transition duration-300 text-black text-base font-normal left-8 hover:text-white"
                         >
                           <p>About Us</p>
                         </NavLink>
-                        <NavLink
+                        <NavLink onClick={closeSidebar}
                           to="team"
                           className="hover:bg-brandColor flex items-center px-2 w-full h-10 transition duration-300 text-black text-base font-normal left-8 hover:text-white"
                         >
