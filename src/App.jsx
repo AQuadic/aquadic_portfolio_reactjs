@@ -5,6 +5,7 @@ import Team from "./pages/Team";
 import WebDevelopment from "./pages/WebDevelopment";
 import MobDevelopment from "./pages/MobDevelopment";
 import Testing from "./pages/Testing";
+import Portfolio from "./pages/Portfolio";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="webdev" element={<WebDevelopment />} />
           <Route path="mobiledev" element={<MobDevelopment />} />
           <Route path="testing" element={<Testing />} />
+          <Route path="portfolio" element={<Portfolio />} />
         </Route>
       </Routes>
     </BrowserRouter>

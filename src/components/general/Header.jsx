@@ -167,7 +167,7 @@ const Header = () => {
               </li>
               <li>
                 <NavLink
-                  to="/contactUs"
+                  to="/portfolio"
                   className="block py-2 px-3 md:p-0 text-[#121212] font-medium text-base transform  hover:text-brandColor hover:underline transition-all duration-300"
                 >
                   Portfolio
