@@ -10,7 +10,8 @@ import arrow from "@/assets/images/down_arrow.svg";
 import logo from "@/assets/images/logo.svg";
 import lang from "@/assets/images/lang.svg";
 import toggle from "@/assets/images/toggle.svg";
-import close from "@/assets/images/closeIcon.svg"
+import close from "@/assets/images/closeIcon.svg";
+
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const toggleDropdown = () => {
@@ -34,7 +35,7 @@ const Header = () => {
               <img src={toggle} className="w-6 h-6" alt="Menu Icon" />
             </button>
             <NavLink to="/">
-              <img src={logo} alt="Logo" />
+              <img className="max-sm:w-[130px]" src={logo} alt="Logo" />
             </NavLink>
           </div>
           <div
@@ -70,25 +71,46 @@ const Header = () => {
                     <DropdownMenuContent className="w-56 mx-2">
                       <DropdownMenuLabel>
                         <ul>
-                          <NavLink to='aboutus' className="hover:bg-brandColor flex items-center px-2 w-full h-10 transition duration-300 text-black text-base font-normal left-8 hover:text-white">
+                          <NavLink
+                            to="aboutus"
+                            className="hover:bg-brandColor flex items-center px-2 w-full h-10 transition duration-300 text-black text-base font-normal left-8 hover:text-white"
+                          >
                             <p>About Us</p>
                           </NavLink>
-                          <NavLink to="team" className="hover:bg-brandColor flex items-center px-2 w-full h-10 transition duration-300 text-black text-base font-normal left-8 hover:text-white">
+                          <NavLink
+                            to="team"
+                            className="hover:bg-brandColor flex items-center px-2 w-full h-10 transition duration-300 text-black text-base font-normal left-8 hover:text-white"
+                          >
                             <p>Team</p>
                           </NavLink>
-                          <NavLink to="process" className="hover:bg-brandColor flex items-center px-2 w-full h-10 transition duration-300 text-black text-base font-normal left-8 hover:text-white">
+                          <NavLink
+                            to="process"
+                            className="hover:bg-brandColor flex items-center px-2 w-full h-10 transition duration-300 text-black text-base font-normal left-8 hover:text-white"
+                          >
                             <p>Process</p>
                           </NavLink>
-                          <NavLink to="flog" className="hover:bg-brandColor flex items-center px-2 w-full h-10 transition duration-300 text-black text-base font-normal left-8 hover:text-white">
+                          <NavLink
+                            to="flog"
+                            className="hover:bg-brandColor flex items-center px-2 w-full h-10 transition duration-300 text-black text-base font-normal left-8 hover:text-white"
+                          >
                             <p>Flog</p>
                           </NavLink>
-                          <NavLink to="portfolio" className="hover:bg-brandColor flex items-center px-2 w-full h-10 transition duration-300 text-black text-base font-normal left-8 hover:text-white">
+                          <NavLink
+                            to="portfolio"
+                            className="hover:bg-brandColor flex items-center px-2 w-full h-10 transition duration-300 text-black text-base font-normal left-8 hover:text-white"
+                          >
                             <p>Portfolio</p>
                           </NavLink>
-                          <NavLink to="joinus" className="hover:bg-brandColor flex items-center px-2 w-full h-10 transition duration-300 text-black text-base font-normal left-8 hover:text-white">
+                          <NavLink
+                            to="joinus"
+                            className="hover:bg-brandColor flex items-center px-2 w-full h-10 transition duration-300 text-black text-base font-normal left-8 hover:text-white"
+                          >
                             <p>Join Us</p>
                           </NavLink>
-                          <NavLink to="contactus" className="hover:bg-brandColor flex items-center px-2 w-full h-10 transition duration-300 text-black text-base font-normal left-8 hover:text-white">
+                          <NavLink
+                            to="contactus"
+                            className="hover:bg-brandColor flex items-center px-2 w-full h-10 transition duration-300 text-black text-base font-normal left-8 hover:text-white"
+                          >
                             <p>Contact Us</p>
                           </NavLink>
                         </ul>
@@ -108,19 +130,34 @@ const Header = () => {
                     <DropdownMenuContent className="w-full mx-2">
                       <DropdownMenuLabel>
                         <ul>
-                          <NavLink to='/webdev' className="hover:bg-brandColor flex items-center px-2 w-full h-10 transition duration-300 text-black text-base font-normal left-8 hover:text-white">
+                          <NavLink
+                            to="/webdev"
+                            className="hover:bg-brandColor flex items-center px-2 w-full h-10 transition duration-300 text-black text-base font-normal left-8 hover:text-white"
+                          >
                             <p>Web Development</p>
                           </NavLink>
-                          <NavLink to='/mobiledesign' className="hover:bg-brandColor flex items-center px-2 w-full h-10 transition duration-300 text-black text-base font-normal left-8 hover:text-white">
+                          <NavLink
+                            to="/mobiledesign"
+                            className="hover:bg-brandColor flex items-center px-2 w-full h-10 transition duration-300 text-black text-base font-normal left-8 hover:text-white"
+                          >
                             <p>Mobile App Design</p>
                           </NavLink>
-                          <NavLink to='/webdesign' className="hover:bg-brandColor flex items-center px-2 w-full h-10 transition duration-300 text-black text-base font-normal left-8 hover:text-white">
+                          <NavLink
+                            to="/webdesign"
+                            className="hover:bg-brandColor flex items-center px-2 w-full h-10 transition duration-300 text-black text-base font-normal left-8 hover:text-white"
+                          >
                             <p>Web Design</p>
                           </NavLink>
-                          <NavLink to='/mobiledev' className="hover:bg-brandColor flex items-center px-2 w-full h-10 transition duration-300 text-black text-base font-normal left-8 hover:text-white">
+                          <NavLink
+                            to="/mobiledev"
+                            className="hover:bg-brandColor flex items-center px-2 w-full h-10 transition duration-300 text-black text-base font-normal left-8 hover:text-white"
+                          >
                             <p>Mobile App Development</p>
                           </NavLink>
-                          <NavLink to='/testing' className="hover:bg-brandColor flex items-center px-2 w-full h-10 transition duration-300 text-black text-base font-normal left-8 hover:text-white">
+                          <NavLink
+                            to="/testing"
+                            className="hover:bg-brandColor flex items-center px-2 w-full h-10 transition duration-300 text-black text-base font-normal left-8 hover:text-white"
+                          >
                             <p>Software Testing</p>
                           </NavLink>
                         </ul>
@@ -175,25 +212,46 @@ const Header = () => {
                   <DropdownMenuContent className="w-56">
                     <DropdownMenuLabel>
                       <ul>
-                        <NavLink to='aboutus' className="hover:bg-brandColor flex items-center px-2 w-full h-10 transition duration-300 text-black text-base font-normal left-8 hover:text-white">
+                        <NavLink
+                          to="aboutus"
+                          className="hover:bg-brandColor flex items-center px-2 w-full h-10 transition duration-300 text-black text-base font-normal left-8 hover:text-white"
+                        >
                           <p>About Us</p>
                         </NavLink>
-                        <NavLink to="team" className="hover:bg-brandColor flex items-center px-2 w-full h-10 transition duration-300 text-black text-base font-normal left-8 hover:text-white">
+                        <NavLink
+                          to="team"
+                          className="hover:bg-brandColor flex items-center px-2 w-full h-10 transition duration-300 text-black text-base font-normal left-8 hover:text-white"
+                        >
                           <p>Team</p>
                         </NavLink>
-                        <NavLink to="process" className="hover:bg-brandColor flex items-center px-2 w-full h-10 transition duration-300 text-black text-base font-normal left-8 hover:text-white">
+                        <NavLink
+                          to="process"
+                          className="hover:bg-brandColor flex items-center px-2 w-full h-10 transition duration-300 text-black text-base font-normal left-8 hover:text-white"
+                        >
                           <p>Process</p>
                         </NavLink>
-                        <NavLink to="flog" className="hover:bg-brandColor flex items-center px-2 w-full h-10 transition duration-300 text-black text-base font-normal left-8 hover:text-white">
+                        <NavLink
+                          to="flog"
+                          className="hover:bg-brandColor flex items-center px-2 w-full h-10 transition duration-300 text-black text-base font-normal left-8 hover:text-white"
+                        >
                           <p>Flog</p>
                         </NavLink>
-                        <NavLink to="portfolio" className="hover:bg-brandColor flex items-center px-2 w-full h-10 transition duration-300 text-black text-base font-normal left-8 hover:text-white">
+                        <NavLink
+                          to="portfolio"
+                          className="hover:bg-brandColor flex items-center px-2 w-full h-10 transition duration-300 text-black text-base font-normal left-8 hover:text-white"
+                        >
                           <p>Portfolio</p>
                         </NavLink>
-                        <NavLink to="joinus" className="hover:bg-brandColor flex items-center px-2 w-full h-10 transition duration-300 text-black text-base font-normal left-8 hover:text-white">
+                        <NavLink
+                          to="joinus"
+                          className="hover:bg-brandColor flex items-center px-2 w-full h-10 transition duration-300 text-black text-base font-normal left-8 hover:text-white"
+                        >
                           <p>Join Us</p>
                         </NavLink>
-                        <NavLink to="contactus" className="hover:bg-brandColor flex items-center px-2 w-full h-10 transition duration-300 text-black text-base font-normal left-8 hover:text-white">
+                        <NavLink
+                          to="contactus"
+                          className="hover:bg-brandColor flex items-center px-2 w-full h-10 transition duration-300 text-black text-base font-normal left-8 hover:text-white"
+                        >
                           <p>Contact Us</p>
                         </NavLink>
                       </ul>
@@ -213,19 +271,34 @@ const Header = () => {
                   <DropdownMenuContent className="w-full">
                     <DropdownMenuLabel>
                       <ul>
-                        <NavLink to='/webdev' className="hover:bg-brandColor flex items-center px-2 w-full h-10 transition duration-300 text-black text-base font-normal left-8 hover:text-white">
+                        <NavLink
+                          to="/webdev"
+                          className="hover:bg-brandColor flex items-center px-2 w-full h-10 transition duration-300 text-black text-base font-normal left-8 hover:text-white"
+                        >
                           <p>Web Development</p>
                         </NavLink>
-                        <NavLink to='/mobiledesign' className="hover:bg-brandColor flex items-center px-2 w-full h-10 transition duration-300 text-black text-base font-normal left-8 hover:text-white">
+                        <NavLink
+                          to="/mobiledesign"
+                          className="hover:bg-brandColor flex items-center px-2 w-full h-10 transition duration-300 text-black text-base font-normal left-8 hover:text-white"
+                        >
                           <p>Mobile App Design</p>
                         </NavLink>
-                        <NavLink to='/webdesign' className="hover:bg-brandColor flex items-center px-2 w-full h-10 transition duration-300 text-black text-base font-normal left-8 hover:text-white">
+                        <NavLink
+                          to="/webdesign"
+                          className="hover:bg-brandColor flex items-center px-2 w-full h-10 transition duration-300 text-black text-base font-normal left-8 hover:text-white"
+                        >
                           <p>Web Design</p>
                         </NavLink>
-                        <NavLink to='/mobiledev' className="hover:bg-brandColor flex items-center px-2 w-full h-10 transition duration-300 text-black text-base font-normal left-8 hover:text-white">
+                        <NavLink
+                          to="/mobiledev"
+                          className="hover:bg-brandColor flex items-center px-2 w-full h-10 transition duration-300 text-black text-base font-normal left-8 hover:text-white"
+                        >
                           <p>Mobile App Development</p>
                         </NavLink>
-                        <NavLink to='/testing' className="hover:bg-brandColor flex items-center px-2 w-full h-10 transition duration-300 text-black text-base font-normal left-8 hover:text-white">
+                        <NavLink
+                          to="/testing"
+                          className="hover:bg-brandColor flex items-center px-2 w-full h-10 transition duration-300 text-black text-base font-normal left-8 hover:text-white"
+                        >
                           <p>Software Testing</p>
                         </NavLink>
                       </ul>
@@ -253,7 +326,9 @@ const Header = () => {
           </div>
           <div className="order-3 flex items-center gap-2">
             <img src={lang} alt="Language" />
-            <p className="text-brandColor font-medium text-[28px]">العربية</p>
+            <p className="text-brandColor font-medium text-xl sm:text-[28px]">
+              العربية
+            </p>
           </div>
         </div>
       </nav>
