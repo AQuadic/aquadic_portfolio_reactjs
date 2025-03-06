@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const ProcessPage = () => {
-  return (
-    <div>ProcessPage</div>
-  )
-}
+  return <section className="container">ProcessPage</section>;
+};
 
-export default ProcessPage
+export default ProcessPage;
