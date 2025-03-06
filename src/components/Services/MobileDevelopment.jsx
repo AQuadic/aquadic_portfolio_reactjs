@@ -1,5 +1,10 @@
 import Services from "../general/Services"
-import performace from '../../assets/images/performace.svg'
+import android from "../../assets/images/android.svg"
+import ios from "../../assets/images/ios.svg"
+import userFriendly from "../../assets/images/userFriendly.svg"
+import testing from '../../assets/images/testing.svg'
+import quality from '../../assets/images/quality.svg'
+import scalable from '../../assets/images/scalable.svg'
 import pinkBG from '../../assets/images/pinkBG.webp'
 import Projects from "../general/Projects"
 
@@ -8,32 +13,32 @@ const MobDevelopment = () => {
         <section className="container my-[72px]">
             <div className="grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-12">
                 <Services
-                    image={performace}
+                    image={android}
                     title="Android"
                     paragraph="Building Android apps using Gradle building tool and Android Studio, for different devices and screen sizes."
                 />
                 <Services
-                    image={performace}
+                    image={ios}
                     title="iOS"
                     paragraph="Building iOS apps using Swift programming language, for both iPhone and iPad."
                 />
                 <Services
-                    image={performace}
+                    image={scalable}
                     title="DevOps"
                     paragraph="Continuous integration for the project life cycle, starting from development and ending with automatic store submission."
                 />
                 <Services
-                    image={performace}
+                    image={userFriendly}
                     title="User-Friendly Designs"
                     paragraph="Using the latest platform specific guidelines and trends, we develop professional apps that are not only easy on the eyes but also easy to use."
                 />
                 <Services
-                    image={performace}
+                    image={quality}
                     title="Quality"
                     paragraph="Our mobile apps pass through different types of testing: functional testing, compatibility testing, security testing and UI testing."
                 />
                 <Services
-                    image={performace}
+                    image={testing}
                     title="Testing on Different"
                     paragraph="We test our applications on different devices, using manual testing and automated testing to deliver high-quality apps."
                 />
