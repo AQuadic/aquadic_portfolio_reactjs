@@ -28,9 +28,9 @@ const Header = () => {
 
   return (
     <div>
-      <nav className="container z-10 relative h-[100px] py-8 mb-8">
-        <div className="flex items-center justify-between mx-auto md:px-4">
-          <div className="flex items-center space-x-3 rtl:space-x-reverse">
+      <nav className="container z-10 relative h-[100px] py-8 ">
+        <div className="flex items-center justify-between gap-3 mx-auto">
+          <div className="flex items-center  rtl:space-x-reverse">
             <button className="md:hidden flex" onClick={toggleSidebar1}>
               <img src={toggle} className="w-6 h-6" alt="Menu Icon" />
             </button>
