@@ -1,22 +1,58 @@
-import React from "react";
 import BigStar from "@/components/icons/home/BigStar.jsx";
 import SmallStar from "@/components/icons/home/SmallStar.jsx";
+import { motion } from "framer-motion";
+import React from "react";
+
+const createFloatAndPulse = (delay) => ({
+  animate: {
+    y: [0, -5, 0],
+    opacity: [0.8, 1, 0.8],
+    transition: {
+      y: {
+        duration: 2,
+        repeat: Infinity,
+        repeatType: "mirror",
+        ease: "easeInOut",
+        delay,
+      },
+      opacity: {
+        duration: 1.5,
+        repeat: Infinity,
+        repeatType: "mirror",
+        ease: "easeInOut",
+        delay,
+      },
+    },
+  },
+});
 
 const HomeStars = () => {
   return (
     <div>
-      <span className="absolute -top-20 right-4">
+      <motion.span
+        className="absolute -top-20 right-4"
+        {...createFloatAndPulse(0)}
+      >
         <BigStar />
-      </span>
-      <span className="absolute top-20 right-20">
+      </motion.span>
+      <motion.span
+        className="absolute top-20 right-20"
+        {...createFloatAndPulse(0.5)}
+      >
         <SmallStar />
-      </span>
-      <span className="absolute top-32 left-20">
+      </motion.span>
+      <motion.span
+        className="absolute top-32 left-20"
+        {...createFloatAndPulse(1)}
+      >
         <SmallStar />
-      </span>
-      <span className="absolute bottom-16 left-4">
+      </motion.span>
+      <motion.span
+        className="absolute bottom-16 left-4"
+        {...createFloatAndPulse(1.5)}
+      >
         <BigStar />
-      </span>
+      </motion.span>
     </div>
   );
 };
