@@ -14,6 +14,7 @@ export default {
       },
       colors: {
         brandColor: "#EA433A",
+        brandGray: "#5D5D5D",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         card: {
