@@ -7,42 +7,50 @@ import quality from '../../assets/images/quality.svg'
 import scalable from '../../assets/images/scalable.svg'
 import pinkBG from '../../assets/images/pinkBG.webp'
 import Projects from "../general/Projects"
+import { useInView } from "react-intersection-observer";
+import AnimateOnScroll from "@/components/general/AnimateOnScroll.jsx";
 
 const MobDevelopment = () => {
+    const [ref, inView] = useInView({
+        triggerOnce: true,
+        rootMargin: "-300px 0px",
+    });
     return (
-        <section className="container mt-[72px] mb-[120px]">
-            <div className="grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-12">
-                <Services
-                    image={android}
-                    title="Android"
-                    paragraph="Building Android apps using Gradle building tool and Android Studio, for different devices and screen sizes."
-                />
-                <Services
-                    image={ios}
-                    title="iOS"
-                    paragraph="Building iOS apps using Swift programming language, for both iPhone and iPad."
-                />
-                <Services
-                    image={scalable}
-                    title="DevOps"
-                    paragraph="Continuous integration for the project life cycle, starting from development and ending with automatic store submission."
-                />
-                <Services
-                    image={userFriendly}
-                    title="User-Friendly Designs"
-                    paragraph="Using the latest platform specific guidelines and trends, we develop professional apps that are not only easy on the eyes but also easy to use."
-                />
-                <Services
-                    image={quality}
-                    title="Quality"
-                    paragraph="Our mobile apps pass through different types of testing: functional testing, compatibility testing, security testing and UI testing."
-                />
-                <Services
-                    image={testing}
-                    title="Testing on Different"
-                    paragraph="We test our applications on different devices, using manual testing and automated testing to deliver high-quality apps."
-                />
-            </div>
+        <section ref={ref} className="container mt-[72px] mb-[120px]">
+            <AnimateOnScroll inView={inView} direction={"rightToLeft"}>
+                <div className="grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-12">
+                    <Services
+                        image={android}
+                        title="Android"
+                        paragraph="Building Android apps using Gradle building tool and Android Studio, for different devices and screen sizes."
+                    />
+                    <Services
+                        image={ios}
+                        title="iOS"
+                        paragraph="Building iOS apps using Swift programming language, for both iPhone and iPad."
+                    />
+                    <Services
+                        image={scalable}
+                        title="DevOps"
+                        paragraph="Continuous integration for the project life cycle, starting from development and ending with automatic store submission."
+                    />
+                    <Services
+                        image={userFriendly}
+                        title="User-Friendly Designs"
+                        paragraph="Using the latest platform specific guidelines and trends, we develop professional apps that are not only easy on the eyes but also easy to use."
+                    />
+                    <Services
+                        image={quality}
+                        title="Quality"
+                        paragraph="Our mobile apps pass through different types of testing: functional testing, compatibility testing, security testing and UI testing."
+                    />
+                    <Services
+                        image={testing}
+                        title="Testing on Different"
+                        paragraph="We test our applications on different devices, using manual testing and automated testing to deliver high-quality apps."
+                    />
+                </div>
+            </AnimateOnScroll>
 
             <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4 mt-14">
                 <Projects
