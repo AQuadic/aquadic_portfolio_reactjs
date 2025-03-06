@@ -10,7 +10,7 @@ import pinkBG from '../../assets/images/pinkBG.webp'
 import Projects from "../general/Projects"
 const WebDevelopement = () => {
     return (
-        <section className="container my-[72px]">
+        <section className="container mt-[72px] mb-[120px]">
             <div className="grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-12">
                 <Services
                     image={performace}
