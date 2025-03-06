@@ -11,7 +11,7 @@ const ContactUs = () => {
     rootMargin: "-300px 0px",
   });
   return (
-    <section ref={ref} className="container ">
+    <section ref={ref} className="container md:mb-[120px]">
       <h1 className="text-[#121212] md:text-[32px] text-lg flex justify-center md:leading-8">
         Contact Us
       </h1>

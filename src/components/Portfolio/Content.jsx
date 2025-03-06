@@ -10,9 +10,9 @@ import Projects from "../general/Projects"
 const Content = () => {
     return (
         <section className="container">
-            <h1 className="text-[#121212] text-[56px] font-semibold flex justify-center"> <span className="text-brandColor"> Portfolio&nbsp;</span> Company</h1>
-            <Tabs defaultValue="all" className="w-[400px]">
-                <TabsList className="flex gap-4">
+            <h1 className="text-[#121212] md:text-[56px] text-3xl font-semibold flex justify-center"> <span className="text-brandColor"> Portfolio&nbsp;</span> Company</h1>
+            <Tabs defaultValue="all" className="">
+                <TabsList className="flex flex-wrap md:gap-4">
                     <TabsTrigger value="all">All</TabsTrigger>
                     <TabsTrigger value="booking">Booking</TabsTrigger>
                     <TabsTrigger value="Business">business</TabsTrigger>
@@ -23,7 +23,7 @@ const Content = () => {
                     <TabsTrigger value="hotel">Hotel</TabsTrigger>
                     <TabsTrigger value="carServices">Car Services</TabsTrigger>
                 </TabsList>
-                <TabsContent value="all" className="!w-[1200px]">
+                <TabsContent value="all" className="lg:!w-[1200px]">
                     <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4 mt-10 mb-[120px]">
                         <Projects
                             image={pinkBG}
@@ -73,7 +73,7 @@ const Content = () => {
                     </div>
                 </TabsContent>
 
-                <TabsContent value="booking" className="!w-[1200px]">
+                <TabsContent value="booking" className="lg:!w-[1200px]">
                     <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4 mt-10 mb-[120px]">
                         <Projects
                             image={pinkBG}

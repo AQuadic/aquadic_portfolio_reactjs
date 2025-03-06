@@ -84,7 +84,7 @@ const TeamCard = () => {
         },
         {
             image: teammember,
-            name: "Asmaa Elbanna",
+            name: "Asmaa Mostafa",
             position: "Junior Frontend",
         },
     ];
