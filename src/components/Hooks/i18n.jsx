@@ -5,6 +5,8 @@ import navbarEn from "../../locales/en/navbar.json";
 import navbarAr from "../../locales/ar/navbar.json";
 import homeEn from "../../locales/en/home.json";
 import homeAr from "../../locales/ar/home.json";
+import testimonialsEn from "../../locales/en/testimonials.json";
+import testimonialsAr from "../../locales/ar/testimonials.json";
 
 i18n
   .use(initReactI18next)
@@ -18,10 +20,12 @@ i18n
       en: {
         navbar: navbarEn,
         home: homeEn,
+        testimonials: testimonialsEn,
       },
       ar: {
         navbar: navbarAr,
         home: homeAr,
+        testimonials: testimonialsAr,
       },
     },
   });
