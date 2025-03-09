@@ -8,11 +8,13 @@ import {
 } from "@/components/ui/dropdown-menu";
 import arrow from "@/assets/images/down_arrow.svg";
 import logo from "@/assets/images/logo.svg";
-import lang from "@/assets/images/lang.svg";
 import toggle from "@/assets/images/toggle.svg";
 import close from "@/assets/images/closeIcon.svg";
-
+import Language from "./Language";
+import { useTranslation } from "react-i18next";
+import "../Hooks/i18n";
 const Header = () => {
+  const { t } = useTranslation("navbar");
   const [isOpen, setIsOpen] = useState(false);
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
@@ -51,7 +53,7 @@ const Header = () => {
             className={`fixed inset-y-0 ${isSidebarOpen ? "left-0" : "-left-full"} bg-white w-64 md:hidden z-50 transition-all duration-300 ease-in-out`}
           >
             <div className="flex items-center justify-between px-5">
-              <p onClick={toggleSidebar} className="relative top-4 left-48">
+              <p onClick={toggleSidebar} className="relative top-4 ltr:left-48">
                 <img src={close} alt="Close Icon" />
               </p>
             </div>
@@ -63,7 +65,7 @@ const Header = () => {
                     className="block py-2 px-3 md:p-0 text-[#121212] font-medium text-base transform  hover:text-brandColor hover:underline transition-all duration-300"
                     aria-current="page"
                   >
-                    Home
+                    {t('home')}
                   </NavLink>
                 </li>
                 <li
@@ -73,7 +75,7 @@ const Header = () => {
                   <DropdownMenu>
                     <DropdownMenuTrigger className="flex items-center gap-1">
                       <p className="block py-2 px-3 md:p-0 text-[#121212] font-medium text-base transform  hover:text-brandColor hover:underline transition-all duration-300">
-                        Company
+                        {t('company')}
                       </p>
                       <img src={arrow} alt="Arrow" />
                     </DropdownMenuTrigger>
@@ -84,43 +86,43 @@ const Header = () => {
                             to="aboutus"
                             className="hover:bg-brandColor flex items-center px-2 w-full h-10 transition duration-300 text-black text-base font-normal left-8 hover:text-white"
                           >
-                            <p>About Us</p>
+                            <p>{t('aboutus')}</p>
                           </NavLink>
                           <NavLink onClick={closeSidebar}
                             to="team"
                             className="hover:bg-brandColor flex items-center px-2 w-full h-10 transition duration-300 text-black text-base font-normal left-8 hover:text-white"
                           >
-                            <p>Team</p>
+                            <p>{t('team')}</p>
                           </NavLink>
                           <NavLink onClick={closeSidebar}
                             to="process"
                             className="hover:bg-brandColor flex items-center px-2 w-full h-10 transition duration-300 text-black text-base font-normal left-8 hover:text-white"
                           >
-                            <p>Process</p>
+                            <p>{t('process')}</p>
                           </NavLink>
                           <NavLink onClick={closeSidebar}
                             to="flog"
                             className="hover:bg-brandColor flex items-center px-2 w-full h-10 transition duration-300 text-black text-base font-normal left-8 hover:text-white"
                           >
-                            <p>Flog</p>
+                            <p>{t('flog')}</p>
                           </NavLink>
                           <NavLink onClick={closeSidebar}
                             to="portfolio"
                             className="hover:bg-brandColor flex items-center px-2 w-full h-10 transition duration-300 text-black text-base font-normal left-8 hover:text-white"
                           >
-                            <p>Portfolio</p>
+                            <p>{t('portfolio')}</p>
                           </NavLink>
                           <NavLink onClick={closeSidebar}
                             to="joinus"
                             className="hover:bg-brandColor flex items-center px-2 w-full h-10 transition duration-300 text-black text-base font-normal left-8 hover:text-white"
                           >
-                            <p>Join Us</p>
+                            <p>{t('joinus')}</p>
                           </NavLink>
                           <NavLink onClick={closeSidebar}
                             to="contactus"
                             className="hover:bg-brandColor flex items-center px-2 w-full h-10 transition duration-300 text-black text-base font-normal left-8 hover:text-white"
                           >
-                            <p>Contact Us</p>
+                            <p>{t('contactus')}</p>
                           </NavLink>
                         </ul>
                       </DropdownMenuLabel>
@@ -132,7 +134,7 @@ const Header = () => {
                   <DropdownMenu>
                     <DropdownMenuTrigger className="flex items-center gap-1">
                       <p className="block py-2 px-3 md:p-0 text-[#121212] font-medium text-base transform  hover:text-brandColor hover:underline transition-all duration-300">
-                        Services
+                        {t('services')}
                       </p>
                       <img src={arrow} alt="Arrow" />
                     </DropdownMenuTrigger>
@@ -143,31 +145,31 @@ const Header = () => {
                             to="/webdev"
                             className="hover:bg-brandColor flex items-center px-2 w-full h-10 transition duration-300 text-black text-base font-normal left-8 hover:text-white"
                           >
-                            <p>Web Development</p>
+                            <p>{t('webdev')}</p>
                           </NavLink>
                           <NavLink onClick={closeSidebar}
                             to="/mobiledesign"
                             className="hover:bg-brandColor flex items-center px-2 w-full h-10 transition duration-300 text-black text-base font-normal left-8 hover:text-white"
                           >
-                            <p>Mobile App Design</p>
+                            <p>{t('mobiledesign')}</p>
                           </NavLink>
                           <NavLink onClick={closeSidebar}
                             to="/webdesign"
                             className="hover:bg-brandColor flex items-center px-2 w-full h-10 transition duration-300 text-black text-base font-normal left-8 hover:text-white"
                           >
-                            <p>Web Design</p>
+                            <p>{t('webdesign')}</p>
                           </NavLink>
                           <NavLink onClick={closeSidebar}
                             to="/mobiledev"
                             className="hover:bg-brandColor flex items-center px-2 w-full h-10 transition duration-300 text-black text-base font-normal left-8 hover:text-white"
                           >
-                            <p>Mobile App Development</p>
+                            <p>{t('mobiledev')}</p>
                           </NavLink>
                           <NavLink onClick={closeSidebar}
                             to="/testing"
                             className="hover:bg-brandColor flex items-center px-2 w-full h-10 transition duration-300 text-black text-base font-normal left-8 hover:text-white"
                           >
-                            <p>Software Testing</p>
+                            <p>{t('testing')}</p>
                           </NavLink>
                         </ul>
                       </DropdownMenuLabel>
@@ -179,7 +181,7 @@ const Header = () => {
                     to="/portfolio"
                     className="block py-2 px-3 md:p-0 text-[#121212] font-medium text-base transform  hover:text-brandColor hover:underline transition-all duration-300"
                   >
-                    Portfolio
+                    {t('portfolio')}
                   </NavLink>
                 </li>
                 <li>
@@ -187,7 +189,7 @@ const Header = () => {
                     to="/faqs"
                     className="block py-2 px-3 md:p-0 text-[#121212] font-medium text-base transform  hover:text-brandColor hover:underline transition-all duration-300"
                   >
-                    Flog
+                    {t('flog')}
                   </NavLink>
                 </li>
               </ul>
@@ -204,7 +206,7 @@ const Header = () => {
                   className="block py-2 px-3 md:p-0 text-[#121212] font-medium text-base transform  hover:text-brandColor hover:underline transition-all duration-300"
                   aria-current="page"
                 >
-                  Home
+                  {t('home')}
                 </NavLink>
               </li>
               <li
@@ -214,7 +216,7 @@ const Header = () => {
                 <DropdownMenu>
                   <DropdownMenuTrigger className="flex items-center gap-1">
                     <p className="block py-2 px-3 md:p-0 text-[#121212] font-medium text-base transform  hover:text-brandColor hover:underline transition-all duration-300">
-                      Company
+                      {t('company')}
                     </p>
                     <img src={arrow} alt="Arrow" />
                   </DropdownMenuTrigger>
@@ -225,43 +227,43 @@ const Header = () => {
                           to="aboutus"
                           className="hover:bg-brandColor flex items-center px-2 w-full h-10 transition duration-300 text-black text-base font-normal left-8 hover:text-white"
                         >
-                          <p>About Us</p>
+                          <p>{t('aboutus')}</p>
                         </NavLink>
                         <NavLink onClick={closeSidebar}
                           to="team"
                           className="hover:bg-brandColor flex items-center px-2 w-full h-10 transition duration-300 text-black text-base font-normal left-8 hover:text-white"
                         >
-                          <p>Team</p>
+                          <p>{t('team')}</p>
                         </NavLink>
                         <NavLink
                           to="process"
                           className="hover:bg-brandColor flex items-center px-2 w-full h-10 transition duration-300 text-black text-base font-normal left-8 hover:text-white"
                         >
-                          <p>Process</p>
+                          <p>{t('process')}</p>
                         </NavLink>
                         <NavLink
                           to="flog"
                           className="hover:bg-brandColor flex items-center px-2 w-full h-10 transition duration-300 text-black text-base font-normal left-8 hover:text-white"
                         >
-                          <p>Flog</p>
+                          <p>{t('flog')}</p>
                         </NavLink>
                         <NavLink
                           to="portfolio"
                           className="hover:bg-brandColor flex items-center px-2 w-full h-10 transition duration-300 text-black text-base font-normal left-8 hover:text-white"
                         >
-                          <p>Portfolio</p>
+                          <p>{t('portfolio')}</p>
                         </NavLink>
                         <NavLink
                           to="joinus"
                           className="hover:bg-brandColor flex items-center px-2 w-full h-10 transition duration-300 text-black text-base font-normal left-8 hover:text-white"
                         >
-                          <p>Join Us</p>
+                          <p>{t('joinus')}</p>
                         </NavLink>
                         <NavLink
                           to="contactus"
                           className="hover:bg-brandColor flex items-center px-2 w-full h-10 transition duration-300 text-black text-base font-normal left-8 hover:text-white"
                         >
-                          <p>Contact Us</p>
+                          <p>{t('contactus')}</p>
                         </NavLink>
                       </ul>
                     </DropdownMenuLabel>
@@ -273,7 +275,7 @@ const Header = () => {
                 <DropdownMenu>
                   <DropdownMenuTrigger className="flex items-center gap-1">
                     <p className="block py-2 px-3 md:p-0 text-[#121212] font-medium text-base transform  hover:text-brandColor hover:underline transition-all duration-300">
-                      Services
+                      {t('services')}
                     </p>
                     <img src={arrow} alt="Arrow" />
                   </DropdownMenuTrigger>
@@ -284,31 +286,31 @@ const Header = () => {
                           to="/webdev"
                           className="hover:bg-brandColor flex items-center px-2 w-full h-10 transition duration-300 text-black text-base font-normal left-8 hover:text-white"
                         >
-                          <p>Web Development</p>
+                          <p>{t('webdev')}</p>
                         </NavLink>
                         <NavLink
                           to="/mobiledesign"
                           className="hover:bg-brandColor flex items-center px-2 w-full h-10 transition duration-300 text-black text-base font-normal left-8 hover:text-white"
                         >
-                          <p>Mobile App Design</p>
+                          <p>{t('mobiledesign')}</p>
                         </NavLink>
                         <NavLink
                           to="/webdesign"
                           className="hover:bg-brandColor flex items-center px-2 w-full h-10 transition duration-300 text-black text-base font-normal left-8 hover:text-white"
                         >
-                          <p>Web Design</p>
+                          <p>{t('webdesign')}</p>
                         </NavLink>
                         <NavLink
                           to="/mobiledev"
                           className="hover:bg-brandColor flex items-center px-2 w-full h-10 transition duration-300 text-black text-base font-normal left-8 hover:text-white"
                         >
-                          <p>Mobile App Development</p>
+                          <p>{t('mobiledev')}</p>
                         </NavLink>
                         <NavLink
                           to="/testing"
                           className="hover:bg-brandColor flex items-center px-2 w-full h-10 transition duration-300 text-black text-base font-normal left-8 hover:text-white"
                         >
-                          <p>Software Testing</p>
+                          <p>{t('testing')}</p>
                         </NavLink>
                       </ul>
                     </DropdownMenuLabel>
@@ -320,7 +322,7 @@ const Header = () => {
                   to="/portfolio"
                   className="block py-2 px-3 md:p-0 text-[#121212] font-medium text-base transform  hover:text-brandColor hover:underline transition-all duration-300"
                 >
-                  Portfolio
+                  {t('portfolio')}
                 </NavLink>
               </li>
               <li>
@@ -328,16 +330,13 @@ const Header = () => {
                   to="/faqs"
                   className="block py-2 px-3 md:p-0 text-[#121212] font-medium text-base transform  hover:text-brandColor hover:underline transition-all duration-300"
                 >
-                  Flog
+                  {t('flog')}
                 </NavLink>
               </li>
             </ul>
           </div>
           <div className="order-3 flex items-center gap-2">
-            <img src={lang} alt="Language" />
-            <p className="text-brandColor font-medium text-xl sm:text-[28px]">
-              العربية
-            </p>
+            <Language />
           </div>
         </div>
       </nav>

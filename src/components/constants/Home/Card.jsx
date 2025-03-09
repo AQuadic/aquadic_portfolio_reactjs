@@ -1,7 +1,9 @@
 import { useState } from 'react';
-
+import { useTranslation } from "react-i18next";
+import "../../Hooks/i18n";
 // eslint-disable-next-line react/prop-types
 const Card = ({ text1, text2, imgSrc, rating }) => {
+    const { t } = useTranslation("testimonials");
     const [isExpanded, setIsExpanded] = useState(false);
 
     return (
@@ -10,14 +12,14 @@ const Card = ({ text1, text2, imgSrc, rating }) => {
                 <p>
                     {text1}
                     {!isExpanded && (
-                        <span className="text-brandColor cursor-pointer ml-2 font-semibold" onClick={() => setIsExpanded(true)}> Read More</span>
+                        <span className="text-brandColor cursor-pointer ml-2 font-semibold" onClick={() => setIsExpanded(true)}>{t('readMore')}</span>
                     )}
                 </p>
                 {isExpanded && (
                     <div>
                         <p>
                             {text2}
-                            <span className="text-brandColor cursor-pointer mt-2 font-semibold" onClick={() => setIsExpanded(false)}> Show Less</span>
+                            <span className="text-brandColor cursor-pointer mt-2 font-semibold" onClick={() => setIsExpanded(false)}>{t('showLess')}</span>
                         </p>
                     </div>
                 )}

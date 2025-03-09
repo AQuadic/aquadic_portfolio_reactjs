@@ -9,8 +9,11 @@ import email from "@/assets/images/footerEmail.svg";
 import location from "@/assets/images/footerLoc.svg";
 import { Link, NavLink } from "react-router";
 import FooterGradient from "@/components/icons/general/FooterGradient.jsx";
+import { useTranslation } from "react-i18next";
+import "../Hooks/i18n";
 
 const Footer = () => {
+  const { t } = useTranslation("navbar");
   return (
     <footer className="relative py-6">
       <div className="container">
@@ -20,12 +23,11 @@ const Footer = () => {
               <img src={logo} className="w-[183px] h-[55px]" alt="Logo" />
             </Link>
             <p className="w-[377px] mt-8 text-[#121212] text-xl leading-8">
-              Hire top web & mobile developers for your short-term and long-term
-              projects, from MVPs to a completed solution.
+              {t('footerTitle')}
             </p>
             <div className="mt-12">
               <p className="text-[#121212] text-[28px] leading-[28px] font-medium">
-                Follow Us
+                {t('followUS')}
               </p>
               <div className="flex gap-2 mt-6">
                 <NavLink to="/">
@@ -49,7 +51,7 @@ const Footer = () => {
           <div className="grid grid-cols-2  sm:gap-6 lg:grid-cols-3">
             <div>
               <h2 className="mb-6 text-[28px] font-semibold text-black">
-                Company
+                {t('company')}
               </h2>
               <ul>
                 <li className="mb-4">
@@ -57,12 +59,12 @@ const Footer = () => {
                     to="/aboutus"
                     className="text-black text-base left-8"
                   >
-                    About Us
+                    {t('aboutus')}
                   </NavLink>
                 </li>
                 <li className="mb-4">
                   <NavLink to="/team" className="text-black text-base left-8">
-                    Team
+                    {t('team')}
                   </NavLink>
                 </li>
                 <li className="mb-4">
@@ -70,12 +72,12 @@ const Footer = () => {
                     to="/process"
                     className="text-black text-base left-8"
                   >
-                    Process
+                    {t('process')}
                   </NavLink>
                 </li>
                 <li className="mb-4">
                   <NavLink to="/flog" className="text-black text-base left-8">
-                    Flog
+                    {t('flog')}
                   </NavLink>
                 </li>
                 <li className="mb-4">
@@ -83,12 +85,12 @@ const Footer = () => {
                     to="/portfolio"
                     className="text-black text-base left-8"
                   >
-                    Portfolio
+                    {t('portfolio')}
                   </NavLink>
                 </li>
                 <li className="mb-4">
                   <NavLink to="/joinus" className="text-black text-base left-8">
-                    Join Us
+                    {t('joinus')}
                   </NavLink>
                 </li>
                 <li className="mb-4">
@@ -96,19 +98,19 @@ const Footer = () => {
                     to="/contactus"
                     className="text-black text-base left-8"
                   >
-                    Contact Us
+                    {t('contactus')}
                   </NavLink>
                 </li>
               </ul>
             </div>
             <div>
               <h2 className="mb-6 text-[28px] font-semibold text-black">
-                Services
+                {t('services')}
               </h2>
               <ul>
                 <li className="mb-4">
                   <NavLink to="/webdev" className="text-black text-xl left-8">
-                    Web Development
+                    {t('webdev')}
                   </NavLink>
                 </li>
                 <li className="mb-4">
@@ -116,7 +118,7 @@ const Footer = () => {
                     to="/mobiledesign"
                     className="text-black text-xl left-8"
                   >
-                    Mobile App Design
+                    {t('mobiledesign')}
                   </NavLink>
                 </li>
                 <li className="mb-4">
@@ -124,7 +126,7 @@ const Footer = () => {
                     to="/webdesign"
                     className="text-black text-xl left-8"
                   >
-                    Web Design
+                    {t('webdesign')}
                   </NavLink>
                 </li>
                 <li className="mb-4">
@@ -132,19 +134,19 @@ const Footer = () => {
                     to="/mobiledev"
                     className="text-black text-xl left-8"
                   >
-                    Mobile App Development
+                    {t('mobiledev')}
                   </NavLink>
                 </li>
                 <li className="mb-4">
                   <NavLink to="/testing" className="text-black text-xl left-8">
-                    Software Testing
+                    {t('testing')}
                   </NavLink>
                 </li>
               </ul>
             </div>
             <div>
               <h2 className="mb-6 text-[28px] font-semibold text-black">
-                Contact Us
+                {t('contactus')}
               </h2>
               <ul>
                 <li className="mb-4 flex items-center gap-4">
