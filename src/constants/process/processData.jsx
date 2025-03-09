@@ -9,6 +9,7 @@ import LaunchIcon from "@/components/icons/process/LaunchIcon.jsx";
 import LaunchHoveredIcon from "@/components/icons/process/LaunchHoveredIcon.jsx";
 import SalesIcon from "@/components/icons/process/SalesIcon.jsx";
 import SalesHoveredIcon from "@/components/icons/process/SalesHoveredIcon.jsx";
+import RedArrow from "@/components/icons/process/RedArrow";
 
 export const processData = [
   {
@@ -18,11 +19,20 @@ export const processData = [
       <div className="flex flex-col gap-4 text-[#121212] text-base">
         <p className="font-medium">Answering the big questions:.</p>
         <ul className="flex flex-col gap-3">
-          <li>Who is supposed to use this software?</li>
-          <li>Who is supposed to use this software?</li>
-          <li>Who is supposed to use this software?</li>
-          <li>Who is supposed to use this software?</li>
+          <li className="flex items-center gap-2">
+            <RedArrow />
+            Who is supposed to use this software?</li>
+          <li className="flex items-center gap-2">
+            <RedArrow />
+            Who is supposed to use this software?</li>
+          <li className="flex items-center gap-2">
+            <RedArrow />
+            Who is supposed to use this software?</li>
+          <li className="flex items-center gap-2">
+            <RedArrow />
+            Who is supposed to use this software?</li>
         </ul>
+        <p className="text-[#5D5D5D]">And defining project scheduling and cost, we’ve an outline to focus on, and move forward. This data is then analyzed to ensure its validity.</p>
       </div>
     ),
     icon: <AnalysisIcon />,
