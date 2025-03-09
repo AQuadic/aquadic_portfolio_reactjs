@@ -1,8 +1,9 @@
 import React, { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
+import { processData } from "@/constants/process/processData.jsx";
 
 const ProcessPage = () => {
-  const [progress, setProgress] = useState(7);
+  const [progress, setProgress] = useState(10);
   console.log(progress);
   const containerRef = useRef(null);
 
@@ -12,8 +13,8 @@ const ProcessPage = () => {
         const { top, height } = containerRef.current.getBoundingClientRect();
         const windowHeight = window.innerHeight;
 
-        let percentage = ((windowHeight - top) / height) * 100;
-        percentage = Math.min(Math.max(percentage - 28, 0), 100);
+        let percentage = ((windowHeight - top) / height) * 90;
+        percentage = Math.min(Math.max(percentage - 17, 0), 100);
         setProgress(percentage);
       }
     };
@@ -31,34 +32,25 @@ const ProcessPage = () => {
         Company <span className="text-brandColor">Process</span>
       </h1>
       <div className="relative w-10 flex flex-col items-center pb-28">
-        <div className="w-8 h-8 rounded-full bg-gray-300 mb-0"></div>
         <div
-          className="absolute w-2 bg-gray-300 h-[1520px] top-4"
+          className="absolute w-2 bg-gray-300 h-[1580px] top-4"
           style={{ borderRadius: "1rem" }}
         ></div>
         <motion.div
-          className="absolute w-2 bg-red-500 top-4 "
+          className="absolute w-2 bg-red-500 top-4 max-h-[1580px]"
           style={{ height: `${progress - 1}%`, borderRadius: "1rem" }}
         />
-        {[...Array(5)].map((_, index) => {
-          const reached = progress >= (index + 1) * (92 / 6);
+        {processData.map((item, index) => {
+          const reached = progress >= index * (100 / 6);
           return (
-            <motion.div
+            <div
               key={index}
-              className="w-8 h-8 rounded-full border-4 bg-white mt-[220px] flex items-center justify-center"
-              animate={{
-                backgroundColor: reached ? "#ef4444" : "#ffffff",
-                borderColor: reached ? "#ef4444" : "#9ca3af",
-              }}
-            />
+              className={`relative z-20 ${index > 0 && "mt-[220px]"}`}
+            >
+              {reached ? item.hoveredIcon : item.icon}
+            </div>
           );
         })}
-        <motion.div
-          className="w-8 h-8 rounded-full bg-gray-300 mt-[220px]"
-          animate={{
-            boxShadow: progress >= 90 ? "0px 0px 15px 5px #ef4444" : "none",
-          }}
-        />
       </div>
     </section>
   );
