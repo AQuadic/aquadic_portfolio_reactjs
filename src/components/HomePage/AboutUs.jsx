@@ -6,7 +6,7 @@ import { useTranslation } from "react-i18next";
 import "../Hooks/i18n";
 
 const AboutUs = () => {
-  const { t } = useTranslation("home");
+  const { t } = useTranslation("aboutus");
   const [ref, inView] = useInView({
     triggerOnce: true,
     rootMargin: "-300px 0px",

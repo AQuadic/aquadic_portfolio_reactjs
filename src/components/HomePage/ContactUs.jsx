@@ -4,8 +4,11 @@ import phone from "../../assets/images/phone.svg";
 import email from "../../assets/images/email.svg";
 import { useInView } from "react-intersection-observer";
 import AnimateOnScroll from "@/components/general/AnimateOnScroll.jsx";
+import { useTranslation } from "react-i18next";
+import "../Hooks/i18n";
 
 const ContactUs = () => {
+  const { t } = useTranslation("contactus");
   const [ref, inView] = useInView({
     triggerOnce: true,
     rootMargin: "-300px 0px",
@@ -13,10 +16,10 @@ const ContactUs = () => {
   return (
     <section ref={ref} className="container md:mb-[120px]">
       <h1 className="text-[#121212] md:text-[32px] text-lg flex justify-center md:leading-8">
-        Contact Us
+        {t('contactus')}
       </h1>
       <h2 className="text-[#121212] md:text-[56px] text-2xl font-bold flex justify-center md:leading-[56px] md:mt-6">
-        <span className="text-brandColor">Connect with us&nbsp;</span>Today
+        <span className="text-brandColor">{t('connectWithUs')}&nbsp;</span>{t('today')}
       </h2>
       <div className="mt-12 flex lg:flex-row flex-col items-center lg:gap-[97px] gap-5">
         <AnimateOnScroll inView={inView} direction={"leftToRight"}>
@@ -54,34 +57,34 @@ const ContactUs = () => {
               type="text"
               name="name"
               className="sm:w-[421px] w-[350px] h-[58px] rounded-[10px] border border-[#A9A7A7] p-2 focus:outline-0 placeholder:text-[#5D5D5D] placeholder:font-medium placeholder:text-base"
-              placeholder="Full Name"
+              placeholder={t('fullName')}
             />
             <input
               type="text"
               name="phone"
               className="sm:w-[421px] w-[350px] h-[58px] rounded-[10px] border border-[#A9A7A7] p-2 focus:outline-0 placeholder:text-[#5D5D5D] placeholder:font-medium placeholder:text-base"
-              placeholder="Enter Phone Number"
+              placeholder={t('phoneNumber')}
             />
             <input
               type="text"
               name="email"
               className="sm:w-[421px] w-[350px] h-[58px] rounded-[10px] border border-[#A9A7A7] p-2 focus:outline-0 placeholder:text-[#5D5D5D] placeholder:font-medium placeholder:text-base"
-              placeholder="Enter Your E-mail"
+              placeholder={t('enterEmail')}
             />
             <input
               type="text"
               name="text"
               className="sm:w-[421px] w-[350px] h-[58px] rounded-[10px] border border-[#A9A7A7] p-2 focus:outline-0 placeholder:text-[#5D5D5D] placeholder:font-medium placeholder:text-base"
-              placeholder="Subject"
+              placeholder={t('subject')}
             />
             <input
               type="text"
               name="text"
               className="sm:w-[421px] w-[350px] h-[120px] rounded-[10px] border border-[#A9A7A7] p-2 focus:outline-0 placeholder:text-[#5D5D5D] placeholder:font-medium placeholder:text-base"
-              placeholder="Message"
+              placeholder={t('message')}
             />
             <button className="w-[206px] h-14 bg-brandColor rounded-[50px] text-white text-base font-bold">
-              Send Message
+              {t('sendMsg')}
             </button>
           </form>
         </AnimateOnScroll>

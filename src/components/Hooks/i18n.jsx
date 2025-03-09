@@ -3,10 +3,12 @@ import { initReactI18next } from "react-i18next";
 
 import navbarEn from "../../locales/en/navbar.json";
 import navbarAr from "../../locales/ar/navbar.json";
-import homeEn from "../../locales/en/home.json";
-import homeAr from "../../locales/ar/home.json";
+import aboutusEn from "../../locales/en/aboutus.json";
+import aboutusAr from "../../locales/ar/aboutus.json";
 import testimonialsEn from "../../locales/en/testimonials.json";
 import testimonialsAr from "../../locales/ar/testimonials.json";
+import contactusEn from "../../locales/en/contactus.json";
+import contactusAr from "../../locales/ar/contactus.json";
 
 i18n
   .use(initReactI18next)
@@ -19,13 +21,15 @@ i18n
     resources: {
       en: {
         navbar: navbarEn,
-        home: homeEn,
+        aboutus: aboutusEn,
         testimonials: testimonialsEn,
+        contactus: contactusEn,
       },
       ar: {
         navbar: navbarAr,
-        home: homeAr,
+        aboutus: aboutusAr,
         testimonials: testimonialsAr,
+        contactus: contactusAr,
       },
     },
   });
