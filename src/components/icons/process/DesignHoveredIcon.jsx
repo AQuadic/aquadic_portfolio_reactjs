@@ -3,6 +3,7 @@ import React from "react";
 const DesignHoveredIcon = () => {
   return (
     <svg
+      className="max-sm:w-[50px]"
       width="92"
       height="92"
       viewBox="0 0 92 92"
