@@ -8,11 +8,12 @@ import phone from "@/assets/images/footerPhone.svg";
 import email from "@/assets/images/footerEmail.svg";
 import location from "@/assets/images/footerLoc.svg";
 import { Link, NavLink } from "react-router";
+import FooterGradient from "@/components/icons/general/FooterGradient.jsx";
 
 const Footer = () => {
   return (
-    <footer className="container py-6">
-      <div className="">
+    <footer className="relative py-6">
+      <div className="container">
         <div className="md:flex md:justify-between">
           <div className="mb-6 md:mb-0">
             <Link to="/" className="flex items-center">
@@ -168,6 +169,9 @@ const Footer = () => {
           </div>
         </div>
       </div>
+      <span className="absolute bottom-0 left-0">
+        <FooterGradient />
+      </span>
     </footer>
   );
 };
