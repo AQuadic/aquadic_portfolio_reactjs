@@ -3,6 +3,8 @@ import { initReactI18next } from "react-i18next";
 
 import navbarEn from "../../locales/en/navbar.json";
 import navbarAr from "../../locales/ar/navbar.json";
+import homeEn from "../../locales/en/home.json";
+import homeAr from "../../locales/ar/home.json";
 
 i18n
   .use(initReactI18next)
@@ -15,9 +17,11 @@ i18n
     resources: {
       en: {
         navbar: navbarEn,
+        home: homeEn,
       },
       ar: {
         navbar: navbarAr,
+        home: homeAr,
       },
     },
   });

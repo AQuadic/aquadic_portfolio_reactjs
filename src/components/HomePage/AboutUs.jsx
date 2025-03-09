@@ -2,8 +2,11 @@ import { useState } from "react";
 import aboutus from "@/assets/images/aboutusImage.webp";
 import { useInView } from "react-intersection-observer";
 import AnimateOnScroll from "@/components/general/AnimateOnScroll.jsx";
+import { useTranslation } from "react-i18next";
+import "../Hooks/i18n";
 
 const AboutUs = () => {
+  const { t } = useTranslation("home");
   const [ref, inView] = useInView({
     triggerOnce: true,
     rootMargin: "-300px 0px",
@@ -12,7 +15,7 @@ const AboutUs = () => {
   return (
     <section ref={ref} className="container z-50">
       <h1 className="text-[#121212] text-[32px] flex justify-center">
-        About Us
+        {t('aboutus')}
       </h1>
       <div className="flex md:flex-row flex-col md:gap-[88px]">
         <AnimateOnScroll inView={inView} direction={"leftToRight"}>
@@ -26,38 +29,31 @@ const AboutUs = () => {
           <div>
             <h1 className="md:text-[56px] text-2xl font-bold md:leading-[78.4px] mt-4 md:mt-0">
               <span className="text-brandColor">&quot;</span>
-              Shaping the <span className="text-brandColor">Future</span> with
-              Technology and Design
+              {t('shaping')} <span className="text-brandColor">{t('future')}</span> {t('techdesign')}
               <span className="text-brandColor">&quot;</span>
             </h1>
             <div className="md:w-[637px] md:text-[26px] text-xl text-[#5D5D5D] md:leading-[41.6px] md:mt-6 mt-4">
               <p>
                 {" "}
-                At AQuadic, we specialize in delivering innovative software and
-                design-driven solutions that help startups and businesses
-                thrive. Our team works closely with clients to bring their ideas
-                to life...
+                {t('aboutAquadic')}
                 {!isExpanded && (
                   <span
                     className="text-brandColor cursor-pointer ml-2"
                     onClick={() => setIsExpanded(true)}
                   >
-                    Learn More
+                    {t('learnMore')}
                   </span>
                 )}
               </p>
               {isExpanded && (
                 <div>
                   <p>
-                    At AQuadic, we specialize in delivering innovative software
-                    and design-driven solutions that help startups and
-                    businesses thrive. Our team works closely with clients to
-                    bring their ideas to life...
+                    {t('aboutAquadic')}
                     <span
                       className="text-brandColor cursor-pointer mt-2"
                       onClick={() => setIsExpanded(false)}
                     >
-                      Show Less
+                      {t('showLess')}
                     </span>
                   </p>
                 </div>
@@ -67,19 +63,19 @@ const AboutUs = () => {
               <div>
                 <p className="text-brandColor font-bold text-[40px]">+27</p>
                 <p className="text-[#121212] text-xl leading-5 font-semibold">
-                  Project
+                  {t('project')}
                 </p>
               </div>
               <div>
                 <p className="text-brandColor font-bold text-[40px]">+5</p>
                 <p className="text-[#121212] text-xl leading-5 font-semibold">
-                  Client
+                  {t('client')}
                 </p>
               </div>
               <div>
                 <p className="text-brandColor font-bold text-[40px]">+12</p>
                 <p className="text-[#121212] text-xl leading-5 font-semibold">
-                  Countries
+                  {t('countries')}
                 </p>
               </div>
             </div>
