@@ -9,6 +9,8 @@ import testimonialsEn from "../../locales/en/testimonials.json";
 import testimonialsAr from "../../locales/ar/testimonials.json";
 import contactusEn from "../../locales/en/contactus.json";
 import contactusAr from "../../locales/ar/contactus.json";
+import heroEn from "../../locales/en/hero.json";
+import heroAr from "../../locales/ar/hero.json";
 
 i18n
   .use(initReactI18next)
@@ -24,12 +26,14 @@ i18n
         aboutus: aboutusEn,
         testimonials: testimonialsEn,
         contactus: contactusEn,
+        hero: heroEn,
       },
       ar: {
         navbar: navbarAr,
         aboutus: aboutusAr,
         testimonials: testimonialsAr,
         contactus: contactusAr,
+        hero: heroAr,
       },
     },
   });
