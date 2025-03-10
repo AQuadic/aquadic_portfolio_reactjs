@@ -21,6 +21,9 @@ import webDevelopmentEn from "../../locales/en/webDevelopment.json";
 import webDevelopmentAr from "../../locales/ar/webDevelopment.json";
 import mobDevelopmentEn from "../../locales/en/mobDevelopment.json";
 import mobDevelopmentAr from "../../locales/ar/mobDevelopment.json";
+import testingEn from "../../locales/en/testing.json";
+import testingAr from "../../locales/ar/testing.json";
+
 i18n
   .use(initReactI18next)
   .init({
@@ -41,6 +44,7 @@ i18n
         portfolio: portfolioEn,
         webDevelopment: webDevelopmentEn,
         mobDevelopment: mobDevelopmentEn,
+        testing: testingEn,
       },
       ar: {
         navbar: navbarAr,
@@ -53,6 +57,7 @@ i18n
         portfolio: portfolioAr,
         webDevelopment: webDevelopmentAr,
         mobDevelopment: mobDevelopmentAr,
+        testing: testingAr,
       },
     },
   });

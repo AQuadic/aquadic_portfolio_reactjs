@@ -1,12 +1,16 @@
 import PagesHeader from "@/components/general/PagesHeader"
 import SoftwareTesting from "@/components/Services/SoftwareTesting"
+import { useTranslation } from "react-i18next";
+import "../components/Hooks/i18n";
 
 const Testing = () => {
+    const { t } = useTranslation("testing");
     return (
         <div>
             <PagesHeader
-                header="Software Testing"
-                title="Software testing is the process of evaluating software to identify defects and ensure it performs as expected. It helps improve software quality and reliability and is carried out using various techniques and tools by dedicated testers."
+                fheader={t('software')}
+                sheader={t('testing')}
+                title={t('testingTitle')}
             />
             <SoftwareTesting />
         </div>

@@ -30,18 +30,18 @@ const Language = () => {
     }, [language, i18n]);
 
     return (
-        <div className="relative flex items-center">
+        <div className="relative flex items-center mx-2 md:mx-0">
             <button
                 type="button"
-                className="md:w-[125px] w-[100px] md:h-14 md:border flex gap-2 items-center justify-center px-4 py-2 md:text-lg text-xs md:font-bold text-[#1E1E1E] rounded-lg cursor-pointer"
+                className="md:w-[125px] w-[100px] md:h-14 h-10 border flex gap-2 items-center justify-center px-4 py-2 md:text-lg text-xs md:font-bold text-[#1E1E1E] rounded-lg cursor-pointer"
                 onClick={() => setIsOpenLang(!isOpenLang)}
             >
-                <img src={lang} alt="Language" />
+                <img src={lang} className="md:w-full md:h-full w-6 h-6" alt="Language" />
                 <p style={{ color: language === "ar" }}>{language === "ar" ? "English" : "العربية"}</p>
             </button>
 
             {isOpenLang && (
-                <div className="absolute top-12 rtl:md:left-0 ltr:md:right-0 ltr:left-4 rtl:right-4 bg-white border border-gray-200 rounded-lg shadow-lg z-10 w-32">
+                <div className="absolute top-12 rtl:md:left-0 ltr:md:right-0 md:ltr:left-4 md:rtl:right-4 bg-white border border-gray-200 rounded-lg shadow-lg z-10 w-32">
                     {languages.map((lang) => (
                         <div
                             key={lang.code}
