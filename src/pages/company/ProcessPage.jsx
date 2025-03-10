@@ -2,8 +2,11 @@ import React, { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { processData } from "@/constants/process/processData.jsx";
 import ProcessCard from "@/components/process/ProcessCard.jsx";
+import { useTranslation } from "react-i18next";
+import "../../components/Hooks/i18n";
 
 const ProcessPage = () => {
+  const { t } = useTranslation("process");
   const [progress, setProgress] = useState(10);
   const containerRef = useRef(null);
 
@@ -28,8 +31,8 @@ const ProcessPage = () => {
       className="container flex flex-col items-center py-20 overflow-hidden"
       ref={containerRef}
     >
-      <h1 className="text-center text-3xl sm:text-5xl font-semibold mb-12">
-        Company <span className="text-brandColor">Process</span>
+      <h1 className="text-center text-3xl sm:text-5xl font-semibold mb-12 flex gap-2 rtl:flex-row-reverse">
+        {t('company')} <span className="text-brandColor">{t('process')}</span>
       </h1>
       <div className="relative w-10 flex flex-col items-center pb-28">
         <div

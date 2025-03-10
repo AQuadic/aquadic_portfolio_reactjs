@@ -11,6 +11,8 @@ import contactusEn from "../../locales/en/contactus.json";
 import contactusAr from "../../locales/ar/contactus.json";
 import heroEn from "../../locales/en/hero.json";
 import heroAr from "../../locales/ar/hero.json";
+import processEn from "../../locales/en/process.json";
+import processAr from "../../locales/ar/process.json";
 
 i18n
   .use(initReactI18next)
@@ -27,6 +29,7 @@ i18n
         testimonials: testimonialsEn,
         contactus: contactusEn,
         hero: heroEn,
+        process: processEn,
       },
       ar: {
         navbar: navbarAr,
@@ -34,6 +37,7 @@ i18n
         testimonials: testimonialsAr,
         contactus: contactusAr,
         hero: heroAr,
+        process: processAr,
       },
     },
   });
