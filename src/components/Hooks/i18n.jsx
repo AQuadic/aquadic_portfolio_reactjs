@@ -19,6 +19,8 @@ import portfolioEn from "../../locales/en/portfolio.json";
 import portfolioAr from "../../locales/ar/portfolio.json";
 import webDevelopmentEn from "../../locales/en/webDevelopment.json";
 import webDevelopmentAr from "../../locales/ar/webDevelopment.json";
+import mobDevelopmentEn from "../../locales/en/mobDevelopment.json";
+import mobDevelopmentAr from "../../locales/ar/mobDevelopment.json";
 i18n
   .use(initReactI18next)
   .init({
@@ -38,6 +40,7 @@ i18n
         team: teamEn,
         portfolio: portfolioEn,
         webDevelopment: webDevelopmentEn,
+        mobDevelopment: mobDevelopmentEn,
       },
       ar: {
         navbar: navbarAr,
@@ -49,6 +52,7 @@ i18n
         team: teamAr,
         portfolio: portfolioAr,
         webDevelopment: webDevelopmentAr,
+        mobDevelopment: mobDevelopmentAr,
       },
     },
   });
