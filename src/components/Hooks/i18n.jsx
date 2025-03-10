@@ -15,6 +15,8 @@ import processEn from "../../locales/en/process.json";
 import processAr from "../../locales/ar/process.json";
 import teamEn from "../../locales/en/team.json";
 import teamAr from "../../locales/ar/team.json";
+import portfolioEn from "../../locales/en/portfolio.json";
+import portfolioAr from "../../locales/ar/portfolio.json";
 
 i18n
   .use(initReactI18next)
@@ -33,6 +35,7 @@ i18n
         hero: heroEn,
         process: processEn,
         team: teamEn,
+        portfolio: portfolioEn,
       },
       ar: {
         navbar: navbarAr,
@@ -41,6 +44,8 @@ i18n
         contactus: contactusAr,
         hero: heroAr,
         process: processAr,
+        team: teamAr,
+        portfolio: portfolioAr,
       },
     },
   });

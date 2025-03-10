@@ -48,7 +48,7 @@ const ProcessPage = () => {
           return (
             <div
               key={index}
-              className={`relative z-20 ${index > 0 && "mt-[220px]"}`}
+              className={`relative ${index > 0 && "mt-[220px]"}`}
             >
               <span>{reached ? item.hoveredIcon : item.icon}</span>
               <motion.div

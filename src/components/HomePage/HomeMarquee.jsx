@@ -4,7 +4,7 @@ import Marquee from "react-fast-marquee";
 
 const HomeMarquee = () => {
   return (
-    <section className="container">
+    <section className="container" dir="ltr">
       <Marquee
         className="marquee-shadow py-6 px-3 rounded-[20px]"
         autoFill={true}
