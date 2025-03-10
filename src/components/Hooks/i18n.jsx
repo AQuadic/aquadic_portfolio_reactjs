@@ -13,6 +13,8 @@ import heroEn from "../../locales/en/hero.json";
 import heroAr from "../../locales/ar/hero.json";
 import processEn from "../../locales/en/process.json";
 import processAr from "../../locales/ar/process.json";
+import teamEn from "../../locales/en/team.json";
+import teamAr from "../../locales/ar/team.json";
 
 i18n
   .use(initReactI18next)
@@ -30,6 +32,7 @@ i18n
         contactus: contactusEn,
         hero: heroEn,
         process: processEn,
+        team: teamEn,
       },
       ar: {
         navbar: navbarAr,
