@@ -1,12 +1,16 @@
 import PagesHeader from "@/components/general/PagesHeader"
 import WebDevelopement from "@/components/Services/WebDevelopement"
+import { useTranslation } from "react-i18next";
+import "../components/Hooks/i18n";
 
 const WebDevelopment = () => {
+    const { t } = useTranslation("webDevelopment");
     return (
         <div>
             <PagesHeader
-                header="Web Development"
-                title="We design and create web that help reach business goals, amaze customers and solve user problems. We will guide you through the whole software development and graphic design process and help you with further app development, both technology and business-wise."
+                fheader={t('web')}
+                sheader={t('dev')}
+                title={t('webTilte')}
             />
             <WebDevelopement />
         </div>
