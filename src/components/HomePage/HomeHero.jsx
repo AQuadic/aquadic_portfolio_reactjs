@@ -8,10 +8,13 @@ import HomeGradientRight from "@/components/icons/home/HomeGradientRight";
 import HomeArch from "@/components/icons/home/HomeArch.jsx";
 import ArrowRight from "@/components/icons/general/ArrowRight.jsx";
 import HomeStars from "@/components/HomePage/HomeStars.jsx";
+import { useTranslation } from "react-i18next";
+import "../Hooks/i18n";
 
 const words = ["Startups", "Businesses", "Agencies"];
 
 const HomeHero = () => {
+  const { t } = useTranslation("hero");
   const [displayedWord, setDisplayedWord] = useState("");
   const [wordIndex, setWordIndex] = useState(0);
 
@@ -53,8 +56,8 @@ const HomeHero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
         >
-          We help
-          <span className="relative text-brandColor ml-2 sm:ml-3 md:ml-4 whitespace-nowrap">
+          {t('weHelp')}
+          <span className="relative text-brandColor ml-2 sm:ml-3 md:ml-4 whitespace-nowrap" dir="ltr">
             {displayedWord.split("").map((letter, i) => (
               <motion.span
                 key={i}
@@ -67,7 +70,7 @@ const HomeHero = () => {
               </motion.span>
             ))}
           </span>{" "}
-          in their design & development journey.
+          {t('journey')}
         </motion.h1>
 
         {/* Scroll-Affected HomeArch */}
@@ -82,11 +85,10 @@ const HomeHero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.3 }}
         >
-          Design and digital product development company. We create beautiful
-          and functional web platforms, apps, and custom software solutions.
+          {t('heroPara')}
         </motion.p>
         <button className="mt-8 mx-auto flex items-center justify-center gap-3 bg-brandColor rounded-full px-6 py-3 text-white font-medium border border-brandColor group">
-          <span>Get Started</span>{" "}
+          <span>{t('getStarted')}</span>{" "}
           <span className="group-hover:translate-x-1 transition-transform">
             <ArrowRight />
           </span>

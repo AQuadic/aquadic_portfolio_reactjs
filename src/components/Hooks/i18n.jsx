@@ -9,6 +9,10 @@ import testimonialsEn from "../../locales/en/testimonials.json";
 import testimonialsAr from "../../locales/ar/testimonials.json";
 import contactusEn from "../../locales/en/contactus.json";
 import contactusAr from "../../locales/ar/contactus.json";
+import heroEn from "../../locales/en/hero.json";
+import heroAr from "../../locales/ar/hero.json";
+import processEn from "../../locales/en/process.json";
+import processAr from "../../locales/ar/process.json";
 import teamEn from "../../locales/en/team.json";
 import teamAr from "../../locales/ar/team.json";
 
@@ -26,6 +30,8 @@ i18n
         aboutus: aboutusEn,
         testimonials: testimonialsEn,
         contactus: contactusEn,
+        hero: heroEn,
+        process: processEn,
         team: teamEn,
       },
       ar: {
@@ -33,7 +39,8 @@ i18n
         aboutus: aboutusAr,
         testimonials: testimonialsAr,
         contactus: contactusAr,
-        team: teamAr,
+        hero: heroAr,
+        process: processAr,
       },
     },
   });
